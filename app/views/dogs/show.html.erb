@@ -1,8 +1,8 @@
 <h1><%= @dog.name %></h1>
 <%= image_tag @dog.image, alt: "alttext" %>
-Found the <%= @dog.found_on %> at <%= @dog.city %>
+<p>Found the <%= @dog.found_on %> at <%= @dog.city %></p>
+
 
 <hr>
-<%= link_to "Delete", '#' %> |
-<%= link_to "Edit", '#' %>
-<hr>
+<%= link_to "Delete", dog_path(@dog), method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to "Edit", edit_dog_path(@dog) %>

@@ -18,6 +18,22 @@ class DogsController < ApplicationController
     redirect_to dog_path(@dog)
   end
 
+  def edit
+    @dog = Dog.find(params[:id])
+  end
+
+  def update
+    @dog = Dog.find(params[:id])
+    @dog.update(dog_params)
+    redirect_to dog_path(@dog)
+  end
+
+  def destroy
+    @dog = Dog.find(params[:id])
+    @dog.destroy
+    redirect_to root_path
+  end
+
   private
 
   def dog_params

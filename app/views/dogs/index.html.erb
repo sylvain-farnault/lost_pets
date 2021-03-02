@@ -3,8 +3,9 @@
 <hr>
 <% @dogs.each do |dog| %>
   <h2><%= link_to dog.name, dog_path(dog) %></h2>
-  <%= image_tag dog.image, alt: "alttext" %>
-  Found the <%= dog.found_on %> at <%= dog.city %>
+  <p>Found the <%= dog.found_on %> at <%= dog.city %></p>
+  <%= image_tag dog.image, alt: "alttext", height: '80px' %>
+
   <hr>
 <% end %>
 <hr>
