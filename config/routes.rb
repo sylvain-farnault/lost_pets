@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: 'dogs#index'
+  get 'dogs/new', to: 'dogs#new', as: :new_dog
+  get 'dogs/:id', to: 'dogs#show', as: :dog
+  post 'dogs', to: 'dogs#create'
 end

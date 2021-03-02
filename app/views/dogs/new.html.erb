@@ -1,0 +1,9 @@
+<h1>New dog</h1>
+
+<%= simple_form_for(@dog) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :city, collection: Dog::CITIES  %>
+  <%= f.input :found_on %>
+  <%= f.submit %>
+<% end %>
+

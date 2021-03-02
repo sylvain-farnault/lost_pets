@@ -1,0 +1,12 @@
+<h1>Dogs</h1>
+
+<hr>
+<% @dogs.each do |dog| %>
+  <h2><%= link_to dog.name, dog_path(dog) %></h2>
+  <%= image_tag dog.image, alt: "alttext" %>
+  Found the <%= dog.found_on %> at <%= dog.city %>
+  <hr>
+<% end %>
+<hr>
+<%= link_to "+ Add dog", new_dog_path %>
+<hr>
